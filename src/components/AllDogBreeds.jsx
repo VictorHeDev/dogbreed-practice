@@ -8,10 +8,17 @@ const AllDogBreeds = () => {
 
   useEffect(() => {
     const getDogBreeds = async () => {
-      const response = await axios.get(BASE_URL);
+      const response = await axios
+        .get(BASE_URL)
+        .then((promise) => {
+          return promise.data;
+        })
+        .catch((e) => {
+          console.log('The error is: ', e);
+        });
       // call get dog breeds from useEffect
       // call set dog breeds within the async function
-      setAllDogsData(response.data.message);
+      setAllDogsData(response.message);
     };
     getDogBreeds();
     // setDogBreeds(getDogBreeds());
@@ -26,9 +33,19 @@ const AllDogBreeds = () => {
   return (
     <div>
       <h3>Here are the breeds</h3>
-      {Object.keys(allDogsData).map((breed) => {
-        return <div>{breed}</div>;
-      })}
+      <div>
+        {Object.entries(allDogsData).map((breed) => {
+          const dogBreed = breed[0];
+          const subBreedArr = breed[1].map((subbreed) => <li>{subbreed}</li>);
+
+          return (
+            <ul>
+              <h5>{dogBreed}</h5>
+              {subBreedArr}
+            </ul>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -6,10 +6,14 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h2>ALL DOG BREEDS!</h2>
-        <p>And maybe some more stuff</p>
-        <AllDogBreeds />
+        <nav className='App-nav'>
+          <div>ALL DOG BREEDS!</div>
+          <div>And maybe some more stuff</div>
+        </nav>
       </header>
+      <main>
+        <AllDogBreeds />
+      </main>
     </div>
   );
 }
