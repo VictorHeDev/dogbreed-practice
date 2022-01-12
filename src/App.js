@@ -7,8 +7,9 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h2>ALL DOG BREEDS!</h2>
+        <p>And maybe some more stuff</p>
+        <AllDogBreeds />
       </header>
-      <AllDogBreeds />
     </div>
   );
 }

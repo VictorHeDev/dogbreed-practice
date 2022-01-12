@@ -4,33 +4,33 @@ import axios from 'axios';
 const BASE_URL = `https://dog.ceo/api/breeds/list/all`;
 
 const AllDogBreeds = () => {
-  const [allDogs, setAllDogs] = useState(null);
+  const [allDogsData, setAllDogsData] = useState(null);
 
   useEffect(() => {
     const getDogBreeds = async () => {
       const response = await axios.get(BASE_URL);
-      const allDogsData = response.data.message;
       // call get dog breeds from useEffect
       // call set dog breeds within the async function
-      // const parsedDogData = Object.keys(allDogsResponse.data.message);
-      setAllDogs(allDogsData);
-
-      // set dog breeds
-      // return parsedDogData;
+      setAllDogsData(response.data.message);
     };
     getDogBreeds();
-    console.log(allDogs);
     // setDogBreeds(getDogBreeds());
     // const allDogs = Object.values(dogBreeds);
-    // console.log(allDogs);
   }, []);
 
-  // console.log(dogBreeds);
   // .data
   // .message
-  // Object.values()
+  if (!allDogsData) return null;
+  console.log(allDogsData);
 
-  return <div></div>;
+  return (
+    <div>
+      <h3>Here are the breeds</h3>
+      {Object.keys(allDogsData).map((breed) => {
+        return <div>{breed}</div>;
+      })}
+    </div>
+  );
 };
 
 export default AllDogBreeds;
