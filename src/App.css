@@ -27,7 +27,7 @@
 .main-header-container {
   background-color: #ffc723;
   width: 100%;
-  height: 10rem;
+  height: 9rem;
   display: flex;
 }
 
@@ -40,6 +40,7 @@
   display: flex;
   justify-content: space-evenly;
 }
+
 .App-link {
   color: #61dafb;
 }
@@ -51,4 +52,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.all-dog-breeds-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dog-breed-container {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid red;
+  width: 25%;
 }

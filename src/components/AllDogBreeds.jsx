@@ -31,22 +31,22 @@ const AllDogBreeds = () => {
   console.log(allDogsData);
 
   return (
-    <div>
-      <h3>Here are the breeds</h3>
-      <div>
+    <>
+      {/* <h3>Here are the breeds</h3> */}
+      <div className='all-dog-breeds-container'>
         {Object.entries(allDogsData).map((breed) => {
           const dogBreed = breed[0];
-          const subBreedArr = breed[1].map((subbreed) => <li>{subbreed}</li>);
+          const subBreedArr = breed[1].map((subbreed) => <div>{subbreed}</div>);
 
           return (
-            <ul>
+            <div className='dog-breed-container'>
               <h5>{dogBreed}</h5>
               {subBreedArr}
-            </ul>
+            </div>
           );
         })}
       </div>
-    </div>
+    </>
   );
 };
 
