@@ -10,7 +10,10 @@ function App() {
     <Router>
       <div className='App'>
         <header className='App-header'>
-          <img src={doge} alt='doge-logo' />
+          <div className='main-header-container'>
+            <img className='doge-logo' src={doge} alt='doge-logo' />
+            <h1>BROWSE SOME DOGES</h1>
+          </div>
           <nav className='App-nav'>
             <div>ALL DOG BREEDS!</div>
             <div>And maybe some more stuff</div>
