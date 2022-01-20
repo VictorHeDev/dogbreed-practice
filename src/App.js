@@ -7,7 +7,7 @@ import AboutDogBreed from './components/AboutDogBreed';
 
 function App() {
   return (
-    <>
+    <div className='App'>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -15,7 +15,7 @@ function App() {
           <Route path=':breed' element={<AboutDogBreed />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
