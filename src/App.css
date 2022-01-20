@@ -5,7 +5,10 @@ body {
 
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-image: url(./assets/paw-bg.jpeg);
+  background-position: center;
+  /* background-size: cover; */
+  min-height: 100vh;
 }
 
 a {
@@ -14,6 +17,7 @@ a {
 }
 
 .App-header {
+  background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,10 +64,12 @@ a {
 }
 
 .dog-breed-container {
+  background-color: orange;
   display: flex;
   flex-direction: column;
   /* flex-wrap: wrap; */
   border: 1px solid red;
+  margin: 1rem;
   width: 25%;
 }
 
