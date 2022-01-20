@@ -11,8 +11,8 @@ const Header = (props) => {
       </div>
       <nav className='App-nav'>
         <NavLink to='/'>HOME</NavLink>
-        <div>ALL DOG BREEDS!</div>
-        <div>And maybe some more stuff</div>
+        <NavLink to='random'>RANDOM</NavLink>
+        {/* <div>And maybe some more stuff</div> */}
       </nav>
     </header>
   );

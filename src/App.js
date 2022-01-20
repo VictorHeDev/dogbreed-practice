@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import AllDogBreeds from './components/AllDogBreeds';
 import AboutDogBreed from './components/AboutDogBreed';
+import RandomDog from './components/RandomDog';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<AllDogBreeds />} />
           <Route path=':breed' element={<AboutDogBreed />} />
+          <Route path='/random' element={<RandomDog />} />
         </Routes>
       </BrowserRouter>
     </div>
