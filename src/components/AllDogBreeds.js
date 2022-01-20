@@ -25,30 +25,34 @@ const AllDogBreeds = () => {
     // const allDogs = Object.values(dogBreeds);
   }, [BASE_URL]);
 
-  // .data
-  // .message
-  if (!allDogsData) return null;
-  console.log(allDogsData);
+  const renderAllDogs = () => {
+    return (
+      allDogsData &&
+      Object.entries(allDogsData).map((breed, j) => {
+        const dogBreed = breed[0];
+        const subBreedArr = breed[1].map((subbreed, i) => (
+          <div className='subbreed' key={i}>
+            {subbreed}
+          </div>
+        ));
+
+        return (
+          <div key={j} className='dog-breed-container'>
+            <Link to={`/${dogBreed}`}>{dogBreed}</Link>
+
+            {subBreedArr}
+          </div>
+        );
+      })
+    );
+  };
+
+  // if (!allDogsData) return null;
+  // console.log(allDogsData);
 
   return (
     <>
-      {/* <h3>Here are the breeds</h3> */}
-      <div className='all-dog-breeds-container'>
-        {Object.entries(allDogsData).map((breed) => {
-          const dogBreed = breed[0];
-          const subBreedArr = breed[1].map((subbreed) => (
-            <div className='subbreed'>{subbreed}</div>
-          ));
-
-          return (
-            <div className='dog-breed-container'>
-              <Link to={`/${dogBreed}`}>{dogBreed}</Link>
-
-              {subBreedArr}
-            </div>
-          );
-        })}
-      </div>
+      <div className='all-dog-breeds-container'>{renderAllDogs()}</div>
     </>
   );
 };
