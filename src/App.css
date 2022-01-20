@@ -13,6 +13,11 @@
   }
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 20vh;
@@ -63,7 +68,13 @@
 
 .dog-breed-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   border: 1px solid red;
   width: 25%;
+}
+
+.subbreed {
+  display: flex;
+  border: 1px solid blue;
 }
