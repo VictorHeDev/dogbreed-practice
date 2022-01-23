@@ -29,3 +29,12 @@ You may also see any lint errors in the console.
 - React Router DOM: used to simulate navigation to other "pages" in an SPA
 - 
 
+
+### Features to add
+- feature a certain number of breeds per page
+ - create page up and page down buttons to see other breeds
+ - let user change number of breeds shown on page
+- search feature on header to dynamically update page based on user input
+- animated drop down menu for breeds with subbreeds
+   - each subbreed is a link to a page with an image
+- loading spinner in case response from api is slow 
