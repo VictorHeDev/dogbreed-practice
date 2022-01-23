@@ -47,6 +47,13 @@ const AllDogBreeds = () => {
             {subbreed}
           </div>
         ));
+        //possible alternative
+        //use object.keys to get list of breeds
+        //iterate through the array, find the key in the object, if it has subreeds, make a dropdown
+
+        //as a seperate function
+        //if a dropdown button is clicked, find the key in the object, iterate through the array of subbreeds, make a list of links to the subreed pages
+
 
         return (
           <div key={j} className='dog-breed-container'>
